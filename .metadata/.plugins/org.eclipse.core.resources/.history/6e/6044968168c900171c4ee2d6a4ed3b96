@@ -1,0 +1,25 @@
+$(function()){
+	$(".js-load").on('click'. function(){
+		$.ajax({url:"http://localhost:9080/livros", 
+			   type:"get",
+			   headers: {},
+			   success: function(response){
+				   tabela(response);
+			   } 
+		});
+	})
+};
+
+function tabela(dados){
+	$(".js-table-body tr").remove();
+	for(var i=0; i<dados.length; i++){
+		linha(dados[i]);
+	}
+}
+
+function linha(linha){
+	var linhaTabela = $("<tr/>");
+	$(".js-table-body").append(linhaTabela);
+	linhaTabela.append("<td>"+ linha.id + "</td>");
+	linhaTabela.append("<td>"+ linha.nome + "</td>");
+}

@@ -1,0 +1,11 @@
+$(function()){
+	$(".js-load").on('click'. function(){
+		$.ajax({url:"http://localhost:9080/livros", 
+			   type:"get",
+			   headers: {},
+			   success: function(response){
+				   alert(response);
+			   } 
+		});
+	})
+};

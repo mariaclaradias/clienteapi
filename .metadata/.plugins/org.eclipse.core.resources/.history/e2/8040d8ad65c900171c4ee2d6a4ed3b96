@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Clientes</title>
+</head>
+<body>
+<button>Listar Clientes</button>
+<br>
+	<table border="1">
+		<thead>
+		<tr>
+		<td>ID</td>
+		<td>Nome</td>
+		</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+</body>
+</html>

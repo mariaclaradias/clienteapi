@@ -1,0 +1,8 @@
+package com.clientes.domain;
+
+import java.util.Date;
+
+public class Cliente {
+	
+	private data data_nascimento; 
+}

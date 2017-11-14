@@ -1,0 +1,14 @@
+package com.clientes.resources;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ClientesResources {
+	@RequestMapping(value = "/clientes", method = RequestMethod.GET)
+	public String lista() {
+		return "Ana, Bernador";
+	}
+
+}

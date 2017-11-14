@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Clientes</title>
+</head>
+<body>
+<button>Listar Clientes</button>
+<br>
+<br>
+	<table border="1">
+		<thead>
+		<tr>
+		<td>ID</td>
+		<td>Nome</td>
+		</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<script src = "https://code.jquery.com/jquery-2.2.2.min.js"></script>
+	<script src = "clientes.js"></script>
+</body>
+</html>

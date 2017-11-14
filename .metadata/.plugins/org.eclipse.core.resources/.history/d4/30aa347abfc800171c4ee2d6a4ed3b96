@@ -1,0 +1,29 @@
+package com.clientes.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.clientes.domain.Cliente;
+import com.clientes.repository.ClientesRepository;
+import com.services.exceptions.ClienteNotFoundException;
+
+@Service
+public class ClientesService {
+
+	@Autowired
+	private ClientesRepository clientesRepository;
+	
+	public List<Cliente> list(){
+		return clientesRepository.findAll();
+	}
+	
+	public Cliente search(Long id) {
+		Cliente cliente = clientesRepository.findOne(id);
+		if(cliente == null) {
+			throw new ClienteNotFoundException("Cliente não encontrado.")
+		}
+		return cliente;
+	}
+}
